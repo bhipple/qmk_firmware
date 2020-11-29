@@ -25,13 +25,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         Dactyl-Manuform (5x6)
 
 /* key matrix size */
-// Rows are doubled-up
+// Rows are doubled-up, because it is the total number of rows between the two halves.
 #define MATRIX_ROWS 12
 #define MATRIX_COLS 6
 
-// wiring of each half
-#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
-#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
+// wiring of each half, use the bottom left 6 and the bottom right 6 pins.
+#define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6 }
+#define MATRIX_ROW_PINS { D4, C6, D7, E6, B4, B5 }
+
+// Mirror the pins on the other side.
+#define MATRIX_COL_PINS_RIGHT { B5, B4, E6, D7, C6, D4 }
+#define MATRIX_ROW_PINS_RIGHT { F6, F7, B1, B3, B2, B6 }
 
 #define DIODE_DIRECTION COL2ROW
 
@@ -39,8 +43,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_DI_PIN D3
 #define RGBLED_NUM 12
 
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
+// Serial, not i2c wiring
+#define USE_SERIAL
 
-/* number of backlight levels */
-// #define BACKLIGHT_LEVELS 3
+// Default to master left
+#define MASTER_LEFT
