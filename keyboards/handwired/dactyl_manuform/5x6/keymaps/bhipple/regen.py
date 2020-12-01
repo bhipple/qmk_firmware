@@ -26,6 +26,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             out += f'  [{section}] = LAYOUT_5x6(\n'
             keys = None
         if ln.startswith('|'):
+            if '======' in ln:
+                continue
             if keys:
                 out += '    , '
             else:
