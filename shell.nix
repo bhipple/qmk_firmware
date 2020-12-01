@@ -1,37 +1,14 @@
 { avr ? true, arm ? true, teensy ? true }:
 
 let
-  nixpkgs = builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/c4b26e702044dbf40f8236136c099d8ab6778514.tar.gz";
-    sha256 = "0w6hgs01qzni3a7cvgadjlmcdlb6vay3w910vh4k9fc949ii7s60";
-  };
+  # nixpkgs = builtins.fetchTarball {
+  #   url = "https://github.com/NixOS/nixpkgs/archive/c4b26e702044dbf40f8236136c099d8ab6778514.tar.gz";
+  #   sha256 = "0w6hgs01qzni3a7cvgadjlmcdlb6vay3w910vh4k9fc949ii7s60";
+  # };
+  nixpkgs = /home/bhipple/src/nixpkgs;
 
   pkgs = import nixpkgs { };
 
-  hjson = with pkgs.python3Packages; buildPythonPackage rec {
-    pname = "hjson";
-    version = "3.0.1";
-
-    src = fetchPypi {
-      inherit pname version;
-      sha256 = "1yaimcgz8w0ps1wk28wk9g9zdidp79d14xqqj9rjkvxalvx2f5qx";
-    };
-    doCheck = false;
-  };
-
-  pythonEnv = pkgs.python3.withPackages (p: with p; [
-    # requirements.txt
-    appdirs
-    argcomplete
-    colorama
-    hjson
-    pygments
-    # requirements-dev.txt
-    nose2
-    flake8
-    pep8-naming
-    yapf
-  ]);
 in
 
 with pkgs;
@@ -51,7 +28,7 @@ in
 mkShell {
   name = "qmk-firmware";
 
-  buildInputs = [ dfu-programmer dfu-util diffutils git pythonEnv ]
+  buildInputs = [ dfu-programmer dfu-util diffutils git qmk ]
     ++ lib.optional avr [
       pkgsCross.avr.buildPackages.binutils
       pkgsCross.avr.buildPackages.gcc8
