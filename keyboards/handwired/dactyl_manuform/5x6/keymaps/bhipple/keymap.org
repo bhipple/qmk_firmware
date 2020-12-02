@@ -5,8 +5,8 @@ Various TODOs:
 - [X] NumPad
 - [X] Macros
 - [X] LeftIdx
-- [ ] RightIdx
-- [ ] Emacs
+- [X] RightIdx
+- [X] Emacs
 - [ ] Tmux
 - [ ] Qwerty
 
@@ -60,10 +60,10 @@ Things to consider:
 * RightIdx
 | =================== | =================== | =================== | =================== | =================== | =================== |   | =================== | =================== | =================== | =================== | =================== | =================== |
 | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
-| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
-| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
-| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
-|                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |   |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |
+| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | D_PROGRAM           | KC_TRANSPARENT      |   | KC_TRANSPARENT      | D_TERMINAL          | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
+| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_ENTER            | KC_BSPACE           | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_ENTER            | KC_ESCAPE           | KC_TRANSPARENT      | KC_TRANSPARENT      |
+| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | M_CLEAR             | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
+|                     |                     | KC_TRANSPARENT      | M_EOL_BRACE         |                     |                     |   |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |
 |                     |                     |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |                     |                     |
 |                     |                     |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |                     |                     |
 |                     |                     |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |                     |                     |
@@ -71,9 +71,9 @@ Things to consider:
 * Emacs
 | =================== | =================== | =================== | =================== | =================== | =================== |   | =================== | =================== | =================== | =================== | =================== | =================== |
 | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
-| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
-| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
-| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
+| KC_TRANSPARENT      | M_EMACS_QUIT        | M_EMACS_WA          | KC_TRANSPARENT      | M_SPC_P_P           | M_SPC_B_B           |   | M_SPC_J_J           | M_EMACS_SWITCH_BUF  | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      |
+| KC_TRANSPARENT      | KC_TRANSPARENT      | M_SPC_R_T           | M_COLON_S_P         | M_SPC_G_S           | M_SPC_G_STAR        |   | M_EMACS_LEFT        | M_EMACS_DOWN        | M_EMACS_UP          | M_EMACS_RIGHT       | KC_TRANSPARENT      | KC_TRANSPARENT      |
+| KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | KC_TRANSPARENT      | M_COLON_B_D         | M_COLON_V_S_P       |   | KC_TRANSPARENT      | M_SPC_P_H           | KC_TRANSPARENT      | KC_TRANSPARENT      | M_SPC_G_SLASH       | KC_TRANSPARENT      |
 |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |   |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |
 |                     |                     |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |                     |                     |
 |                     |                     |                     |                     | KC_TRANSPARENT      | KC_TRANSPARENT      |   | KC_TRANSPARENT      | KC_TRANSPARENT      |                     |                     |                     |                     |
