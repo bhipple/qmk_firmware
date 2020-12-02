@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # Super hack to parse the org file
-import subprocess
 import os
 import re
 
@@ -19,6 +18,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     section = None
     for ln in lines:
+        if ln.startswith('* Notes'):
+            continue
         if ln.startswith('*'):
             if section:
                 out += '\n  ),\n\n'
