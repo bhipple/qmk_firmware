@@ -1,4 +1,13 @@
 * Notes
+To flash:
+
+- Checkout my add/qmk-full branch of NixPkgs
+- Run this from the git root:
+
+  #+BEGIN_SRC sh
+./keyboards/handwired/dactyl_manuform/5x6/keymaps/bhipple/regen.py && nix-shell -I nixpkgs=$HOME/src/nixpkgs --run 'qmk flash'
+  #+END_SRC
+
 Things to consider:
 - super alt-tab macro
 
@@ -70,9 +79,9 @@ Things to consider:
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | RESET                |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_PASTE              | KC_ESCAPE            | KC_TRANSPARENT       |   | KC_LEFT              | KC_DOWN              | KC_UP                | KC_RIGHT             | KC_TRANSPARENT       | M_EOL_SEMICOLON      |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | D_BLUETOOTH          | KC__MUTE             | KC__VOLDOWN          | KC__VOLUP            | KC_TRANSPARENT       | KC_TRANSPARENT       |
+| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | D_BLUETOOTH_CON      | KC__MUTE             | KC__VOLDOWN          | KC__VOLUP            | KC_TRANSPARENT       | KC_TRANSPARENT       |
 |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |   |                      |                      | KC_MEDIA_NEXT_TRACK  | KC_MEDIA_NEXT_TRACK  |                      |                      |
-|                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
+|                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | D_BLUETOOTH_DISC     |                      |                      |                      |                      |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
 
