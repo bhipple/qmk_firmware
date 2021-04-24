@@ -1,14 +1,16 @@
 { avr ? true, arm ? true, teensy ? true }:
-
 let
-  # nixpkgs = builtins.fetchTarball {
-  #   url = "https://github.com/NixOS/nixpkgs/archive/c4b26e702044dbf40f8236136c099d8ab6778514.tar.gz";
-  #   sha256 = "0w6hgs01qzni3a7cvgadjlmcdlb6vay3w910vh4k9fc949ii7s60";
-  # };
-  nixpkgs = /home/bhipple/src/nixpkgs;
+  # We specify sources via Niv: use "niv update nixpkgs" to update nixpkgs, for example.
+  sources = import ./nix/sources.nix {};
+  pkgs = import sources.nixpkgs {};
 
-  pkgs = import nixpkgs { };
-
+  # Builds the python env based on nix/pyproject.toml and
+  # nix/poetry.lock Use the "poetry update --lock", "poetry add
+  # --lock" etc. in the nix folder to adjust the contents of those
+  # files if the requirements*.txt files change
+  pythonEnv = pkgs.poetry2nix.mkPoetryEnv {
+    projectDir = ./nix;
+  };
 in
 
 with pkgs;
@@ -28,7 +30,7 @@ in
 mkShell {
   name = "qmk-firmware";
 
-  buildInputs = [ dfu-programmer dfu-util diffutils git qmk ]
+  buildInputs = [ clang-tools dfu-programmer dfu-util diffutils git pythonEnv poetry niv ]
     ++ lib.optional avr [
       pkgsCross.avr.buildPackages.binutils
       pkgsCross.avr.buildPackages.gcc8
@@ -43,6 +45,6 @@ mkShell {
   shellHook = ''
     # Prevent the avr-gcc wrapper from picking up host GCC flags
     # like -iframework, which is problematic on Darwin
-    unset NIX_TARGET_CFLAGS_COMPILE
+    unset NIX_CFLAGS_COMPILE_FOR_TARGET
   '';
 }
