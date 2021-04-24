@@ -1,11 +1,8 @@
 * Notes
-To flash:
-
-- Checkout my add/qmk-full branch of NixPkgs
-- Run this from the git root:
+To flash, run this from the git root of this project:
 
   #+BEGIN_SRC sh
-./keyboards/handwired/dactyl_manuform/5x6/keymaps/bhipple/regen.py && nix-shell -I nixpkgs=$HOME/src/nixpkgs --run 'qmk flash'
+./keyboards/handwired/dactyl_manuform/5x6/keymaps/bhipple/regen.py && nix-shell --run './bin/qmk flash'
   #+END_SRC
 
 Things to consider:
