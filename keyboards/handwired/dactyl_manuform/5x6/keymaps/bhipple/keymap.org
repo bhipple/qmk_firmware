@@ -12,46 +12,59 @@ Things to consider:
 - super alt-tab macro
 
 * Keycodes
-| M_CLEAR            | "clear\n"                  |
-| M_COLON_B_D        | ":bd\n"                    |
-| M_COLON_S_P        | ":sp\n"                    |
-| M_COLON_V_S_P      | ":vsp\n"                   |
-| M_EMACS_DOWN       | SS_TAP(X_ESCAPE) "wj\n"    |
-| M_EMACS_LEFT       | SS_TAP(X_ESCAPE) "wh\n"    |
-| M_EMACS_QUIT       | ":q\n"                     |
-| M_EMACS_RIGHT      | SS_TAP(X_ESCAPE) "wl\n"    |
-| M_EMACS_SWITCH_BUF | SS_LCTRL("x") "b"          |
-| M_EMACS_UP         | SS_TAP(X_ESCAPE) "wk\n"    |
-| M_EMACS_WA         | ":wa\n"                    |
-| M_EOL_BRACE        | SS_TAP(X_ESCAPE) "A{"      |
-| M_EOL_SEMICOLON    | SS_TAP(X_ESCAPE) "A;"      |
-| M_PASTE            | SS_LSFT(SS_TAP(X_INSERT))  |
-| M_SPC_B_B          | " bb"                      |
-| M_SPC_G_S          | " gs"                      |
-| M_SPC_G_SLASH      | " g/"                      |
-| M_SPC_G_STAR       | " g*"                      |
-| M_SPC_J_J          | " jj"                      |
-| M_SPC_P_H          | " ph"                      |
-| M_SPC_P_P          | " pp"                      |
-| M_SPC_R_T          | " rt"                      |
-| M_TMUX_CREATE      | SS_LCTL("b") "c"           |
-| M_TMUX_DELETE      | SS_LCTL("b") "xy"          |
-| M_TMUX_DOWN        | SS_LCTL("j")               |
-| M_TMUX_FILE        | SS_LCTL("bf")              |
-| M_TMUX_GIT         | SS_LCTL("bg")              |
+| M_CLEAR             | "clear\n"                  |
+| M_COLON_B_D         | ":bd\n"                    |
+| M_COLON_S_P         | ":sp\n"                    |
+| M_COLON_V_S_P       | ":vsp\n"                   |
+| M_EMACS_DOWN        | SS_TAP(X_ESCAPE) "wj\n"    |
+| M_EMACS_LEFT        | SS_TAP(X_ESCAPE) "wh\n"    |
+| M_EMACS_QUIT        | ":q\n"                     |
+| M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) "wl\n"    |
+| M_EMACS_SWITCH_BUF  | SS_LCTRL("x") "b"          |
+| M_EMACS_UP          | SS_TAP(X_ESCAPE) "wk\n"    |
+| M_EMACS_WA          | ":wa\n"                    |
+| M_EOL_BRACE         | SS_TAP(X_ESCAPE) "A{"      |
+| M_EOL_SEMICOLON     | SS_TAP(X_ESCAPE) "A;"      |
+| M_PASTE             | SS_LSFT(SS_TAP(X_INSERT))  |
+| M_SPC_B_B           | " bb"                      |
+| M_SPC_G_S           | " gs"                      |
+| M_SPC_G_SLASH       | " g/"                      |
+| M_SPC_G_STAR        | " g*"                      |
+| M_SPC_J_J           | " jj"                      |
+| M_SPC_P_H           | " ph"                      |
+| M_SPC_P_P           | " pp"                      |
+| M_SPC_R_T           | " rt"                      |
+| M_TMUX_CREATE       | SS_LCTL("b") "c"           |
+| M_TMUX_DELETE       | SS_LCTL("b") "xy"          |
+| M_TMUX_DOWN         | SS_LCTL("j")               |
+| M_TMUX_FILE         | SS_LCTL("bf")              |
+| M_TMUX_GIT          | SS_LCTL("bg")              |
 | M_TMUX_LEFT        | SS_LCTL("h")               |
-| M_TMUX_NEXT        | SS_LCTL("b") "n"           |
-| M_TMUX_PASTE       | SS_LCTL("b") "]"           |
-| M_TMUX_PREV        | SS_LCTL("b") "p"           |
-| M_TMUX_RERUN       | "!!"                       |
+| M_TMUX_LIST_WINDOWS | SS_LCTL("b") "w"           |
+| M_TMUX_NEXT         | SS_LCTL("b") "n"           |
+| M_TMUX_PASTE        | SS_LCTL("b") "]"           |
+| M_TMUX_PREV         | SS_LCTL("b") "p"           |
+| M_TMUX_RERUN        | "!!"                       |
 | M_TMUX_RIGHT       | SS_LCTL("l")               |
-| M_TMUX_SCROLL      | SS_LCTL("b") "[H"          |
-| M_TMUX_SEARCH      | SS_LCTL("b") "/"           |
-| M_TMUX_SPLIT       | SS_LCTL("bu") SS_LSFT("'") |
-| M_TMUX_UP          | SS_LCTL("k")               |
-| M_TMUX_URL         | SS_LCTL("bu")              |
-| M_TMUX_VSPLIT      | SS_LCTL("b") "%"           |
-| M_TMUX_ZOOM        | SS_LCTL("b") "z"           |
+| M_TMUX_SCROLL       | SS_LCTL("b") "[H"          |
+| M_TMUX_SEARCH       | SS_LCTL("b") "/"           |
+| M_TMUX_SPLIT        | SS_LCTL("bu") SS_LSFT("'") |
+| M_TMUX_SWAP_PANES   | SS_LCTL("b") "o"           |
+| M_TMUX_UP           | SS_LCTL("k")               |
+| M_TMUX_URL          | SS_LCTL("bu")              |
+| M_TMUX_VSPLIT       | SS_LCTL("b") "%"           |
+| M_TMUX_WINDOW_1     | SS_LCTL("b") "1"           |
+| M_TMUX_WINDOW_2     | SS_LCTL("b") "2"           |
+| M_TMUX_WINDOW_3     | SS_LCTL("b") "3"           |
+| M_TMUX_WINDOW_4     | SS_LCTL("b") "4"           |
+| M_TMUX_WINDOW_5     | SS_LCTL("b") "5"           |
+| M_TMUX_WINDOW_6     | SS_LCTL("b") "6"           |
+| M_TMUX_WINDOW_7     | SS_LCTL("b") "7"           |
+| M_TMUX_WINDOW_8     | SS_LCTL("b") "8"           |
+| M_TMUX_WINDOW_9     | SS_LCTL("b") "9"           |
+| M_TMUX_WINDOW_LEFT  | SS_LCTL("b") "h"           |
+| M_TMUX_WINDOW_RIGHT | SS_LCTL("b") "l"           |
+| M_TMUX_ZOOM         | SS_LCTL("b") "z"           |
 * Colemak
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |
 | KC_GRAVE             | KC_1                 | KC_2                 | KC_3                 | KC_4                 | KC_5                 |   | KC_6                 | KC_7                 | KC_8                 | KC_9                 | KC_0                 | KC_MINUS             |
@@ -120,9 +133,9 @@ Things to consider:
 
 * Tmux
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_TMUX_FILE          | M_TMUX_PREV          | KC_TRANSPARENT       |   | M_TMUX_DOWN          | M_TMUX_RIGHT         | M_TMUX_URL           | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | M_TMUX_RERUN         | M_TMUX_SPLIT         | M_CLEAR              | M_TMUX_GIT           |   | M_TMUX_UP            | M_TMUX_NEXT          | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
+| KC_TRANSPARENT       | M_TMUX_WINDOW_1      | M_TMUX_WINDOW_2      | M_TMUX_WINDOW_3      | M_TMUX_WINDOW_4      | M_TMUX_WINDOW_5      |   | M_TMUX_WINDOW_6      | M_TMUX_WINDOW_7      | M_TMUX_WINDOW_8      | M_TMUX_WINDOW_9      | KC_TRANSPARENT       | KC_TRANSPARENT       |
+| KC_TRANSPARENT       | KC_TRANSPARENT       | M_TMUX_LIST_WINDOWS  | M_TMUX_FILE          | M_TMUX_PREV          | KC_TRANSPARENT       |   | M_TMUX_DOWN          | M_TMUX_RIGHT         | M_TMUX_URL           | KC_TRANSPARENT       | M_TMUX_SWAP_PANES    | KC_TRANSPARENT       |
+| KC_TRANSPARENT       | KC_TRANSPARENT       | M_TMUX_RERUN         | M_TMUX_SPLIT         | M_CLEAR              | M_TMUX_GIT           |   | M_TMUX_UP            | M_TMUX_NEXT          | M_TMUX_WINDOW_LEFT   | M_TMUX_WINDOW_RIGHT  | KC_TRANSPARENT       | KC_TRANSPARENT       |
 | KC_TRANSPARENT       | M_TMUX_ZOOM          | KC_TRANSPARENT       | M_TMUX_CREATE        | M_TMUX_DELETE        | M_TMUX_VSPLIT        |   | KC_TRANSPARENT       | M_TMUX_LEFT          | KC_TRANSPARENT       | KC_TRANSPARENT       | M_TMUX_SEARCH        | KC_TRANSPARENT       |
 |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |   |                      |                      | KC_TRANSPARENT       | M_TMUX_PASTE         |                      |                      |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
