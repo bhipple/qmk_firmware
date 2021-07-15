@@ -4,9 +4,9 @@ import os
 import re
 
 
-def keycodes(keycodes, tapdance):
+def keycodes(keycodes):
     res = 'enum my_keycodes {\n    M_UNUSED = SAFE_RANGE,\n'
-    for key in list(keycodes.keys()) + list(tapdance.keys()):
+    for key in keycodes.keys():
         res += f'    {key},\n'
 
     res += '};\n'
@@ -36,7 +36,6 @@ bool generated_keycode_process(uint16_t keycode) {
 
 def main():
     codes = {}
-    tapdance = {}
     os.chdir(os.path.dirname(__file__))
 
     with open('keymap.org', 'r') as fh:
@@ -54,14 +53,6 @@ def main():
             while ln.startswith('|'):
                 parts = [x.strip() for x in ln.split('|')]
                 codes[parts[1]] = parts[2]
-                i += 1
-                ln = lines[i]
-        if ln.startswith('* Tap Dance'):
-            i += 1
-            ln = lines[i]
-            while ln.startswith('|'):
-                parts = [x.strip() for x in ln.split('|')]
-                tapdance[parts[1]] = parts[2]
                 i += 1
                 ln = lines[i]
         if ln.startswith('* Notes'):
@@ -87,7 +78,7 @@ def main():
 
     par = '{'
     out = f'''\
-{keycodes(codes, tapdance)}
+{keycodes(codes)}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {par}
 

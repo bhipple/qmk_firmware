@@ -28,8 +28,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // All of the standard ones that are just mapping KEY -> STRING
     return generated_keycode_process(keycode);
 }
-
-// Tap Dance definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
-    // [TD_D_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_D, KC_ESC)
-};
