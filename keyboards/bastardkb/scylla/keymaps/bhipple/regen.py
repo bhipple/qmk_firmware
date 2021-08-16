@@ -61,7 +61,7 @@ def main():
             if section:
                 keymap += '\n  ),\n\n'
             section = ln.split()[-1]
-            keymap += f'  [{section}] = LAYOUT_5x6(\n'
+            keymap += f'  [{section}] = LAYOUT_split_4x6_5(\n'
             keys = None
         if ln.startswith('|'):
             if '======' in ln:
