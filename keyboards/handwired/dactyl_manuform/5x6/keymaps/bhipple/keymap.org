@@ -2,7 +2,7 @@
 To flash, run this from the git root of this project:
 
   #+BEGIN_SRC sh
-./keyboards/handwired/dactyl_manuform/5x6/keymaps/bhipple/regen.py && nix-shell --run './bin/qmk flash'
+./keyboards/handwired/dactyl_manuform/5x6/keymaps/bhipple/regen.py && nix-shell --run 'qmk flash -km bhipple -kb handwired/dactyl_manuform/5x6'
   #+END_SRC
 
 Things to consider:
@@ -136,17 +136,6 @@ Things to consider:
 | KC_TRANSPARENT       | KC_TRANSPARENT       | M_TMUX_RERUN         | M_TMUX_SPLIT         | M_CLEAR              | M_TMUX_GIT           |   | M_TMUX_UP            | M_TMUX_NEXT          | M_TMUX_WINDOW_LEFT   | M_TMUX_WINDOW_RIGHT  | KC_TRANSPARENT       | KC_TRANSPARENT       |
 | KC_TRANSPARENT       | M_TMUX_ZOOM          | KC_TRANSPARENT       | M_TMUX_CREATE        | M_TMUX_DELETE        | M_TMUX_VSPLIT        |   | KC_TRANSPARENT       | M_TMUX_LEFT          | KC_TRANSPARENT       | KC_TRANSPARENT       | M_TMUX_SEARCH        | KC_TRANSPARENT       |
 |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |   |                      |                      | KC_TRANSPARENT       | M_TMUX_PASTE         |                      |                      |
-|                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
-|                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
-|                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
-
-* Layer Qwerty
-| ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |
-|                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |   |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                      |

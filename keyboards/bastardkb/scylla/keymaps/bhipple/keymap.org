@@ -1,8 +1,8 @@
 * Notes
 To flash, run this from the git root of this project:
 
-  #+BEGIN_SRC sh
-./keyboards/bastardkb/scylla/keymaps/bhipple/regen.py && nix-shell --run './bin/qmk flash'
+#+BEGIN_SRC sh
+./keyboards/bastardkb/scylla/keymaps/bhipple/regen.py && nix-shell --run 'qmk flash -km bhipple -kb bastardkb/scylla'
   #+END_SRC
 
 Things to consider:

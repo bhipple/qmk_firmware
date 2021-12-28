@@ -9,7 +9,6 @@
 #define RightIdx 4
 #define Emacs 5
 #define Tmux 6
-#define Qwerty 7
 
 // Define Aliases
 #define D_BLUETOOTH_CON  KC_WWW_SEARCH
