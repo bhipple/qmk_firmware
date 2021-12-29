@@ -1,4 +1,3 @@
-# * Notes
 * Notes
 To flash, run this from the git root of this project:
 
