@@ -1,10 +1,14 @@
-#!/usr/bin/env sh
+#!/usr/bin/env nix-shell
+#!nix-shell -p hwinfo -i zsh
 set -euxo pipefail
 
 make git-submodule
 
+./keyboards/bastardkb/charybdis/4x6/keymaps/bhipple/regen.py
 ./keyboards/handwired/dactyl_manuform/5x6/keymaps/bhipple/regen.py
 ./keyboards/bastardkb/scylla/keymaps/bhipple/regen.py
 
-nix-shell --run 'qmk flash -km bhipple -kb bastardkb/scylla'
+if hwinfo | grep Scylla; then nix-shell --run '&& qmk flash -km bhipple -kb bastardkb/scylla'; fi
+if hwinfo | grep Charybdis; then nix-shell --run 'qmk flash -km bhipple -kb bastardkb/charybdis/4x6'; fi
+
 #nix-shell --run 'qmk flash -km bhipple -kb handwired/dactyl_manuform/5x6'
