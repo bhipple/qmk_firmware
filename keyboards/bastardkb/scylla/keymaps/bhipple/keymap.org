@@ -1,12 +1,5 @@
 * Notes
-To flash, run this from the git root of this project:
-
-#+BEGIN_SRC sh
-./keyboards/bastardkb/scylla/keymaps/bhipple/regen.py && nix-shell --run 'qmk flash -km bhipple -kb bastardkb/scylla'
-  #+END_SRC
-
-Things to consider:
-- super alt-tab macro
+To flash, run ./flash.sh from the root of the project.
 
 * Keycodes
 | M_CLEAR             | "clear\n"                 |
@@ -18,6 +11,8 @@ Things to consider:
 | M_EMACS_QUIT        | ":q\n"                    |
 | M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) " wl\n"  |
 | M_EMACS_SWITCH_BUF  | SS_LCTRL("x") "b"         |
+| M_EMACS_TAB_CLOSE   | SS_LCTRL("x") "t0"        |
+| M_EMACS_TAB_NEW     | SS_LCTRL("x") "tn"        |
 | M_EMACS_TAB_NEXT    | SS_TAP(X_ESCAPE) "gt"     |
 | M_EMACS_TAB_PREV    | SS_TAP(X_ESCAPE) "gT"     |
 | M_EMACS_UP          | SS_TAP(X_ESCAPE) " wk\n"  |
@@ -115,7 +110,7 @@ Things to consider:
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | M_EMACS_QUIT         | M_EMACS_WA           | KC_TRANSPARENT       | M_SPC_P_P            | M_SPC_B_B            |   | M_SPC_J_J            | M_EMACS_SWITCH_BUF   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_R_T            | M_EMACS_TAB_PREV     | M_EMACS_TAB_NEXT     | M_SPC_STAR           |   | M_EMACS_LEFT         | M_EMACS_DOWN         | M_EMACS_UP           | M_EMACS_RIGHT        | KC_TRANSPARENT       | KC_TRANSPARENT        |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_COLON_B_D          | M_COLON_V_S_P        |   | KC_TRANSPARENT       | M_SPC_P_F            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_SLASH          | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_EMACS_TAB_NEW      | M_EMACS_TAB_CLOSE    | M_COLON_V_S_P        |   | KC_TRANSPARENT       | M_SPC_P_F            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_SLASH          | KC_TRANSPARENT        |
 |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                       |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                       |
 
