@@ -1,6 +1,6 @@
 BOOTLOADER = atmel-dfu
 
-AUTO_SHIFT_ENABLE = yes
+AUTO_SHIFT_ENABLE = no
 
 # Slimming down firmware size
 MOUSEKEY_ENABLE = no
