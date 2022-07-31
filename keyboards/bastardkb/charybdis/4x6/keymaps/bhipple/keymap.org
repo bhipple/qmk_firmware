@@ -13,8 +13,8 @@ To flash, run ./flash.sh from the root of the project.
 | M_EMACS_SWITCH_BUF  | SS_LCTRL("x") "b"         |
 | M_EMACS_TAB_CLOSE   | SS_LCTRL("x") "t0"        |
 | M_EMACS_TAB_NEW     | SS_LCTRL("x") "tn"        |
-| M_EMACS_TAB_NEXT    | SS_LCTRL("x") "to"        |
-| M_EMACS_TAB_PREV    | SS_LCTRL("x") "tO"        |
+| M_EMACS_TAB_NEXT    | SS_TAP(X_ESCAPE) "gt"     |
+| M_EMACS_TAB_PREV    | SS_TAP(X_ESCAPE) "gT"     |
 | M_EMACS_UP          | SS_TAP(X_ESCAPE) " wk\n"  |
 | M_EMACS_WA          | ":wa\n"                   |
 | M_EOL_BRACE         | SS_TAP(X_ESCAPE) "A{"     |
