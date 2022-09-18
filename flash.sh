@@ -8,7 +8,7 @@ make git-submodule
 ./keyboards/handwired/dactyl_manuform/5x6/keymaps/bhipple/regen.py
 ./keyboards/bastardkb/scylla/keymaps/bhipple/regen.py
 
-if hwinfo | grep Scylla; then nix-shell --run 'qmk flash -km bhipple -kb bastardkb/scylla'; fi
-if hwinfo | grep Charybdis; then nix-shell --run 'qmk flash -km bhipple -kb bastardkb/charybdis/4x6'; fi
+if hwinfo | grep Scylla; then nix-shell --run 'qmk flash -km bhipple -kb bastardkb/scylla/v1/elitec'; fi
+if hwinfo | grep Charybdis; then nix-shell --run 'qmk flash -km bhipple -kb bastardkb/charybdis/4x6/v1/elitec'; fi
 
 #nix-shell --run 'qmk flash -km bhipple -kb handwired/dactyl_manuform/5x6'
