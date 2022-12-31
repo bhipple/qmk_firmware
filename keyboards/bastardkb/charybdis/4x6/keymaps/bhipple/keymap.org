@@ -8,7 +8,7 @@ To flash, run ./flash.sh from the root of the project.
 | M_COLON_V_S_P       | ":vsp\n"                  |
 | M_EMACS_DOWN        | SS_TAP(X_ESCAPE) " wj\n"  |
 | M_EMACS_LEFT        | SS_TAP(X_ESCAPE) " wh\n"  |
-| M_EMACS_QUIT        | ":wq\n"                   |
+| M_EMACS_QUIT        | ":qa\n"                   |
 | M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) " wl\n"  |
 | M_EMACS_SWITCH_BUF  | SS_LCTRL("x") "b"         |
 | M_EMACS_TAB_CLOSE   | SS_LCTRL("x") "t0"        |
