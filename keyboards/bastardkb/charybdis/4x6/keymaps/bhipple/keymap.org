@@ -10,9 +10,9 @@ To flash, run ./flash.sh from the root of the project.
 | M_EMACS_LEFT        | SS_TAP(X_ESCAPE) " wh\n"  |
 | M_EMACS_QUIT        | ":qa\n"                   |
 | M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) " wl\n"  |
-| M_EMACS_SWITCH_BUF  | SS_LCTRL("x") "b"         |
-| M_EMACS_TAB_CLOSE   | SS_LCTRL("x") "t0"        |
-| M_EMACS_TAB_NEW     | SS_LCTRL("x") "tn"        |
+| M_EMACS_SWITCH_BUF  | SS_LCTL("x") "b"          |
+| M_EMACS_TAB_CLOSE   | SS_LCTL("x") "t0"         |
+| M_EMACS_TAB_NEW     | SS_LCTL("x") "tn"         |
 | M_EMACS_TAB_NEXT    | SS_TAP(X_ESCAPE) "gt"     |
 | M_EMACS_TAB_PREV    | SS_TAP(X_ESCAPE) "gT"     |
 | M_EMACS_UP          | SS_TAP(X_ESCAPE) " wk\n"  |
@@ -63,9 +63,9 @@ To flash, run ./flash.sh from the root of the project.
 * Layer Colemak
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ===================== |
 | KC_GRAVE             | KC_1                 | KC_2                 | KC_3                 | KC_4                 | KC_5                 |   | KC_6                 | KC_7                 | KC_8                 | KC_9                 | KC_0                 | KC_MINUS              |
-| KC_TAB               | KC_Q                 | KC_W                 | KC_F                 | KC_P                 | KC_B                 |   | KC_J                 | KC_L                 | KC_U                 | KC_Y                 | KC_QUOT              | KC_BSLASH             |
+| KC_TAB               | KC_Q                 | KC_W                 | KC_F                 | KC_P                 | KC_B                 |   | KC_J                 | KC_L                 | KC_U                 | KC_Y                 | KC_QUOT              | KC_BACKSLASH          |
 | OSL(Macros)          | MT(MOD_LCTL, KC_A)   | MT(MOD_LALT, KC_R)   | MT(MOD_LGUI, KC_S)   | LT(LeftIdx, KC_T)    | KC_G                 |   | KC_K                 | LT(RightIdx, KC_N)   | MT(MOD_RGUI, KC_E)   | MT(MOD_RALT, KC_I)   | MT(MOD_RCTL, KC_O)   | KC_SCLN               |
-| KC_LSFT              | LT(NumPad, KC_Z)     | LT(Tmux, KC_X)       | LT(Emacs, KC_C)      | KC_D                 | KC_V                 |   | KC_M                 | KC_H                 | LT(Emacs, KC_COMM)   | LT(Tmux, KC_DOT)     | LT(NumPad, KC_SLSH)  | KC_RSHIFT             |
+| KC_LEFT_SHIFT        | LT(NumPad, KC_Z)     | LT(Tmux, KC_X)       | LT(Emacs, KC_C)      | KC_D                 | KC_V                 |   | KC_M                 | KC_H                 | LT(Emacs, KC_COMM)   | LT(Tmux, KC_DOT)     | LT(NumPad, KC_SLSH)  | KC_RIGHT_SHIFT        |
 |                      |                      |                      | KC_ENTER             | KC_SPACE             | KC_NO                |   | KC_MS_BTN1           | KC_MS_BTN2           |                      |                      |                      |                       |
 |                      |                      |                      |                      | KC_NO                | KC_NO                |   | KC_NO                |                      |                      |                      |                      |                       |
 
@@ -83,7 +83,7 @@ To flash, run ./flash.sh from the root of the project.
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_PASTE              | KC_ESCAPE            | KC_TRANSPARENT       |   | KC_LEFT              | KC_DOWN              | KC_UP                | KC_RIGHT             | KC_TRANSPARENT       | M_EOL_SEMICOLON       |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | D_BLUETOOTH_CON      | KC__MUTE             | KC__VOLDOWN          | KC__VOLUP            | KC_TRANSPARENT       | RESET                 |
+| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | D_BLUETOOTH_CON      | KC_KB_MUTE           | KC_KB_VOLUME_DOWN    | KC_KB_VOLUME_UP      | KC_TRANSPARENT       | QK_BOOTLOADER         |
 |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                       |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       |                      |                      |                      |                      |                       |
 
@@ -100,7 +100,7 @@ To flash, run ./flash.sh from the root of the project.
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ===================== |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | D_PROGRAM            | KC_TRANSPARENT       |   | KC_TRANSPARENT       | D_TERMINAL           | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_ENTER             | KC_BSPACE            | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_ENTER             | KC_ESCAPE            | KC_TRANSPARENT       | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_ENTER             | KC_BACKSPACE         | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_ENTER             | KC_ESCAPE            | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_CLEAR              | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
 |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       |                      |                      |                      |                       |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       |                      |                      |                      |                      |                       |
