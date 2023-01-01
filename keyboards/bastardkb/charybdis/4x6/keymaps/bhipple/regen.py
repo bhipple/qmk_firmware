@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Super hacky compiler for my org file
+import argparse
 import os
 import re
 
@@ -35,6 +36,19 @@ bool generated_keycode_process(uint16_t keycode) {
 
 
 def main():
+    parser = argparse.ArgumentParser('Generator for QMK keymaps')
+    parser.add_argument('keyboard', choices=['charybdis', 'scylla'], help='Keyboard to generate')
+    args = parser.parse_args()
+
+    layout = {
+        'charybdis': 'LAYOUT_charybdis_4x6',
+        'scylla':    'LAYOUT_split_4x6_5',
+    }[args.keyboard]
+    placeholder = {
+        'charybdis': '',
+        'scylla':    'KC_NO',
+    }[args.keyboard]
+
     codes = {}
     os.chdir(os.path.dirname(__file__))
 
@@ -61,7 +75,7 @@ def main():
             if section:
                 keymap += '\n  ),\n\n'
             section = ln.split()[-1]
-            keymap += f'  [{section}] = LAYOUT_charybdis_4x6(\n'
+            keymap += f'  [{section}] = {layout}(\n'
             keys = None
         if ln.startswith('|'):
             if '======' in ln:
@@ -70,6 +84,7 @@ def main():
                 keymap += '    , '
             else:
                 keymap += '      '
+            ln = ln.replace('PLACEHOLDER', placeholder)
             keys = ln.replace('|', ',')
             keys = re.sub('\s*,(\s*,)+', ',', keys)
             keys = re.sub('^\s*,', '', keys)
