@@ -6,16 +6,18 @@ To flash, run ./flash.sh from the root of the project.
 | M_BRKT_R_C          | "]c"                      |
 | M_CLEAR             | "clear\n"                 |
 | M_COLON_B_D         | ":bd\n"                   |
+| M_COLON_DIFFGET     | ":diffget\n"              |
+| M_COLON_DIFFPUT     | ":diffput\n"              |
 | M_COLON_QA          | ":qa\n"                   |
 | M_COLON_S_P         | ":sp\n"                   |
+| M_COLON_TABCLOSE    | ":tabclose\n"             |
+| M_COLON_TABNEW      | ":tabnew\n"               |
 | M_COLON_V_S_P       | ":vsp\n"                  |
 | M_COLON_W           | ":w\n"                    |
 | M_EMACS_DOWN        | SS_TAP(X_ESCAPE) " wj\n"  |
 | M_EMACS_LEFT        | SS_TAP(X_ESCAPE) " wh\n"  |
 | M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) " wl\n"  |
 | M_EMACS_SWITCH_BUF  | SS_LCTL("x") "b"          |
-| M_EMACS_TAB_CLOSE   | SS_LCTL("x") "t0"         |
-| M_EMACS_TAB_NEW     | SS_LCTL("x") "tn"         |
 | M_EMACS_TAB_NEXT    | SS_TAP(X_ESCAPE) "gt"     |
 | M_EMACS_TAB_PREV    | SS_TAP(X_ESCAPE) "gT"     |
 | M_EMACS_UP          | SS_TAP(X_ESCAPE) " wk\n"  |
@@ -110,9 +112,9 @@ To flash, run ./flash.sh from the root of the project.
 * Layer Emacs
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ===================== |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
-| KC_TRANSPARENT       | M_COLON_QA           | M_COLON_W            | KC_TRANSPARENT       | M_SPC_P_P            | M_SPC_B_B            |   | M_BRKT_R_C           | M_EMACS_SWITCH_BUF   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_R_T            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_STAR           |   | M_BRKT_L_C           | M_EMACS_TAB_PREV     | M_EMACS_TAB_NEXT     | M_EMACS_RIGHT        | KC_TRANSPARENT       | KC_TRANSPARENT        |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_EMACS_TAB_NEW      | M_COLON_B_D          | M_COLON_V_S_P        |   | KC_TRANSPARENT       | M_SPC_P_F            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_SLASH          | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | M_COLON_QA           | M_COLON_W            | KC_TRANSPARENT       | M_SPC_P_P            | M_COLON_DIFFPUT      |   | M_BRKT_R_C           | M_EMACS_SWITCH_BUF   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | M_COLON_DIFFGET      | M_SPC_R_T            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_STAR           |   | M_BRKT_L_C           | M_EMACS_TAB_PREV     | M_EMACS_TAB_NEXT     | M_EMACS_RIGHT        | KC_TRANSPARENT       | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_COLON_TABNEW       | M_COLON_B_D          | M_COLON_V_S_P        |   | KC_TRANSPARENT       | M_SPC_P_F            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_SLASH          | KC_TRANSPARENT        |
 |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | PLACEHOLDER          |                      |                      |                       |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | PLACEHOLDER          |                      |                      |                      |                       |
 
