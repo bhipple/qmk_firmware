@@ -1,17 +1,17 @@
 #!/usr/bin/env nix-shell
-#!nix-shell -i zsh
+#!nix-shell -p qmk -i zsh
 set -euxo pipefail
 
-nix-shell -p qmk --run 'make git-submodules'
+make git-submodules
 
-./bhipple/regen.py voyager   | tee keyboards/zsa/voyager/keymaps/bhipple/generated.h
+./bhipple/regen.py voyager | tee keyboards/zsa/voyager/keymaps/bhipple/generated.h
 
-nix-shell --run "qmk compile -km default -kb keychron/v8/ansi_encoder" &
-nix-shell --run "qmk compile -km bhipple -kb zsa/voyager" &
+qmk compile -km default -kb keychron/v8/ansi_encoder &
+qmk compile -km bhipple -kb zsa/voyager &
 wait
 
-km=bhipple ; kb=zsa/voyager
 km=default ; kb=keychron/v8/ansi_encoder
+km=bhipple ; kb=zsa/voyager
 
 fname=$(echo $kb | sed 's|/|_|g')_$km
 if [ -e "$fname.bin" ]; then
@@ -23,4 +23,4 @@ else
 fi
 
 echo Flashing km=$km kb=$kb with fname=$fname
-nix-shell --run "make ${kb}:${km}:flash"  # This works for Voyager, no sudo!
+make ${kb}:${km}:flash  # This works for Voyager, no sudo!
