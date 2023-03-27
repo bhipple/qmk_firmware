@@ -7,7 +7,7 @@
 #define Macros 2
 #define LeftIdx 3
 #define RightIdx 4
-#define Emacs 5
+#define Editor 5
 #define Tmux 6
 
 // Define Aliases

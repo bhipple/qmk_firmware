@@ -18,11 +18,11 @@ To flash, run ./flash.sh from the root of the project.
 | M_EMACS_LEFT        | SS_TAP(X_ESCAPE) " wh\n"  |
 | M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) " wl\n"  |
 | M_EMACS_SWITCH_BUF  | SS_LCTL("x") "b"          |
-| M_EMACS_TAB_NEXT    | SS_TAP(X_ESCAPE) "gt"     |
-| M_EMACS_TAB_PREV    | SS_TAP(X_ESCAPE) "gT"     |
 | M_EMACS_UP          | SS_TAP(X_ESCAPE) " wk\n"  |
 | M_EOL_BRACE         | SS_TAP(X_ESCAPE) "A{"     |
 | M_EOL_SEMICOLON     | SS_TAP(X_ESCAPE) "A;"     |
+| M_gt                | "gt"                      |
+| M_gT                | "gT"                      |
 | M_PASTE             | SS_LSFT(SS_TAP(X_INSERT)) |
 | M_SPC_B_B           | " bb"                     |
 | M_SPC_G_S           | " gs"                     |
@@ -69,7 +69,7 @@ To flash, run ./flash.sh from the root of the project.
 | KC_GRAVE             | KC_1                 | KC_2                 | KC_3                 | KC_4                 | KC_5                 |   | KC_6                 | KC_7                 | KC_8                 | KC_9                 | KC_0                 | KC_MINUS              |
 | KC_TAB               | KC_Q                 | KC_W                 | KC_F                 | KC_P                 | KC_B                 |   | KC_J                 | KC_L                 | KC_U                 | KC_Y                 | KC_QUOT              | KC_BACKSLASH          |
 | OSL(Macros)          | MT(MOD_LCTL, KC_A)   | MT(MOD_LALT, KC_R)   | MT(MOD_LGUI, KC_S)   | LT(LeftIdx, KC_T)    | KC_G                 |   | KC_K                 | LT(RightIdx, KC_N)   | MT(MOD_RGUI, KC_E)   | MT(MOD_RALT, KC_I)   | MT(MOD_RCTL, KC_O)   | KC_SCLN               |
-| KC_LEFT_SHIFT        | LT(NumPad, KC_Z)     | LT(Tmux, KC_X)       | LT(Emacs, KC_C)      | KC_D                 | KC_V                 |   | KC_M                 | KC_H                 | LT(Emacs, KC_COMM)   | LT(Tmux, KC_DOT)     | LT(NumPad, KC_SLSH)  | KC_RIGHT_SHIFT        |
+| KC_LEFT_SHIFT        | LT(NumPad, KC_Z)     | LT(Tmux, KC_X)       | LT(Editor, KC_C)     | KC_D                 | KC_V                 |   | KC_M                 | KC_H                 | LT(Editor, KC_COMM)  | LT(Tmux, KC_DOT)     | LT(NumPad, KC_SLSH)  | KC_RIGHT_SHIFT        |
 |                      |                      |                      | KC_ENTER             | KC_SPACE             | KC_NO                |   | KC_MS_BTN1           | KC_MS_BTN2           | PLACEHOLDER          |                      |                      |                       |
 |                      |                      |                      |                      | KC_NO                | KC_NO                |   | KC_NO                | PLACEHOLDER          |                      |                      |                      |                       |
 
@@ -109,11 +109,11 @@ To flash, run ./flash.sh from the root of the project.
 |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | PLACEHOLDER          |                      |                      |                       |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | PLACEHOLDER          |                      |                      |                      |                       |
 
-* Layer Emacs
+* Layer Editor
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ===================== |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
-| KC_TRANSPARENT       | M_COLON_QA           | M_COLON_W            | KC_TRANSPARENT       | M_SPC_P_P            | M_COLON_DIFFPUT      |   | M_BRKT_R_C           | M_EMACS_SWITCH_BUF   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
-| KC_TRANSPARENT       | M_COLON_DIFFGET      | M_SPC_R_T            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_STAR           |   | M_BRKT_L_C           | M_EMACS_TAB_PREV     | M_EMACS_TAB_NEXT     | M_EMACS_RIGHT        | KC_TRANSPARENT       | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | M_COLON_QA           | M_COLON_W            | KC_TRANSPARENT       | M_SPC_P_P            | M_COLON_DIFFPUT      |   | M_BRKT_R_C           | KC_F1                | KC_F2                | KC_F3                | KC_F4                | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | M_COLON_DIFFGET      | M_SPC_R_T            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_STAR           |   | M_BRKT_L_C           | M_gT                 | M_gt                 | M_EMACS_RIGHT        | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_COLON_TABNEW       | M_COLON_B_D          | M_COLON_V_S_P        |   | KC_TRANSPARENT       | M_SPC_P_F            | KC_TRANSPARENT       | KC_TRANSPARENT       | M_SPC_SLASH          | KC_TRANSPARENT        |
 |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | PLACEHOLDER          |                      |                      |                       |
 |                      |                      |                      |                      | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | PLACEHOLDER          |                      |                      |                      |                       |
