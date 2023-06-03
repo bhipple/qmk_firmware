@@ -2,13 +2,9 @@
 #define TAPPING_TERM 150
 #define RETRO_TAPPING
 
-// If I drill down arst I don't want it to become a modifier
-#define IGNORE_MOD_TAP_INTERRUPT
-
-// Only auto shift the number keys
 #define NO_AUTO_SHIFT_ALPHA
 #define NO_AUTO_SHIFT_SPECIAL
+// Only auto shift the number keys
 
-#undef IGNORE_MOD_TAP_INTERRUPT_PER_KEY
 #undef PERMISSIVE_HOLD
 #undef PERMISSIVE_HOLD_PER_KEY
