@@ -9,6 +9,7 @@
 #define RightIdx 4
 #define Editor 5
 #define Tmux 6
+#define Gaming 7
 
 // Define Aliases
 #define D_BLUETOOTH_CON KC_WWW_SEARCH
