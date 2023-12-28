@@ -10,6 +10,7 @@
 #define Editor 5
 #define Tmux 6
 #define Gaming 7
+#define Qwerty 8
 
 // Define Aliases
 #define D_BLUETOOTH_CON KC_WWW_SEARCH
