@@ -4,8 +4,8 @@ set -euxo pipefail
 
 nix-shell -p qmk --run 'make git-submodules'
 
-./keyboards/bastardkb/charybdis/4x6/keymaps/bhipple/regen.py charybdis
-./keyboards/bastardkb/scylla/keymaps/bhipple/regen.py scylla
+./bhipple/regen.py charybdis | tee keyboards/bastardkb/charybdis/4x6/keymaps/bhipple/generated.h
+./bhipple/regen.py scylla | tee keyboards/bastardkb/scylla/keymaps/bhipple/generated.h
 
 if hwinfo | grep -i Scylla; then kb=bastardkb/scylla/v1/elitec; fi
 if hwinfo | grep -i Charybdis; then kb=bastardkb/charybdis/4x6/v1/elitec; fi
