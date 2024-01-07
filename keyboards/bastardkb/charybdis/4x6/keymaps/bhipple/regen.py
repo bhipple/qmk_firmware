@@ -37,16 +37,18 @@ bool generated_keycode_process(uint16_t keycode) {
 
 def main():
     parser = argparse.ArgumentParser('Generator for QMK keymaps')
-    parser.add_argument('keyboard', choices=['charybdis', 'scylla'], help='Keyboard to generate')
+    parser.add_argument('keyboard', choices=['charybdis', 'scylla', 'voyager'], help='Keyboard to generate')
     args = parser.parse_args()
 
     layout = {
         'charybdis': 'LAYOUT_charybdis_4x6',
         'scylla':    'LAYOUT_split_4x6_5',
+        'voyager':   'LAYOUT_voyager',
     }[args.keyboard]
     placeholder = {
         'charybdis': '',
         'scylla':    'KC_NO',
+        'voyager':   '',
     }[args.keyboard]
 
     codes = {}
@@ -80,16 +82,23 @@ def main():
         if ln.startswith('|'):
             if '======' in ln:
                 continue
-            if keys:
-                keymap += '    , '
-            else:
-                keymap += '      '
+            # Only the first line of a section misses the leading ,
+            prefix='    , ' if keys else '      '
+
             ln = ln.replace('PLACEHOLDER', placeholder)
             keys = ln.replace('|', ',')
-            keys = re.sub('\s*,(\s*,)+', ',', keys)
-            keys = re.sub('^\s*,', '', keys)
-            keys = re.sub(',\s*$', '', keys)
-            keymap += f'{keys}\n'
+            keys = re.sub('\s*,(\s*,)+', ',', keys)  # Remove duplicate ,
+            keys = re.sub('^\s*,', '', keys)         # Remove leading ,
+            keys = re.sub(',\s*$', '', keys)         # Remove trailing ,
+
+            if args.keyboard == 'voyager':
+                row_len = len(keys.split(','))
+                if row_len == 5:
+                    keys = 'KC_NO, KC_SPACE, KC_NO, KC_NO'
+                if row_len < 5:
+                    continue  # skip this row
+
+            keymap += f'{prefix}\n{keys}\n'
 
     par = '{'
     out = f'''\
@@ -103,7 +112,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {par}
 
 ''' + '};'
 
-    with open('generated.h', 'w') as fh:
-        fh.write(out)
+    # with open('generated.h', 'w') as fh:
+    #     fh.write(out)
+    print(out)
 
 main()
