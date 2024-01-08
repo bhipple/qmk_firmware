@@ -2,11 +2,12 @@
 # See rules at https://docs.qmk.fm/#/config_options?id=the-rulesmk-file
 CONSOLE_ENABLE = yes
 COMMAND_ENABLE = no
-MOUSEKEY_ENABLE = no
 ORYX_ENABLE = yes
 RGB_MATRIX_CUSTOM_KB = yes
-TAP_DANCE_ENABLE = no
-SPACE_CADET_ENABLE = no
-CAPS_WORD_ENABLE = no
-COMBO_ENABLE = no
+
 SRC = matrix.c
+
+AUTO_SHIFT_ENABLE = no
+
+MOUSEKEY_ENABLE = no
+EXTRAKEY_ENABLE = yes

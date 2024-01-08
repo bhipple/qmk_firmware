@@ -19,3 +19,6 @@
 
 #undef PERMISSIVE_HOLD
 #undef PERMISSIVE_HOLD_PER_KEY
+
+// This is allegedly the default on QMK 21+, but the Voyager version doesn't have it yet.
+#define IGNORE_MOD_TAP_INTERRUPT
