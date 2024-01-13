@@ -100,3 +100,5 @@ compile_commands.json
 
 # VIA(L) json files that don't belong in QMK repo
 via*.json
+
+keyboards/voyager/keymaps/bhipple/generated.h

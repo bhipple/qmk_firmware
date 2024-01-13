@@ -1,3 +1,5 @@
+#include "config_bhipple_common.h"
+
 #define ORYX_CONFIGURATOR
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define FIRMWARE_VERSION u8"dAA/M7l"
