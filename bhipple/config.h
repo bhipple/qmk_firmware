@@ -4,6 +4,8 @@
 // https://docs.qmk.fm/#/tap_hold?id=retro-tapping
 #define RETRO_TAPPING
 
+// If I hold a tap-hold modifier key, then press another key, then release the
+// other key, send the tap hold even if faster than TAPPING_TERM.
 // https://docs.qmk.fm/#/tap_hold?id=permissive-hold
-#undef PERMISSIVE_HOLD
+#define PERMISSIVE_HOLD
 #undef PERMISSIVE_HOLD_PER_KEY
