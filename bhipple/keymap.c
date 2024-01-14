@@ -12,8 +12,8 @@
 // Define Aliases
 #define D_BLUETOOTH_CON KC_WWW_SEARCH
 #define D_BLUETOOTH_DISC KC_MAIL
-#define D_PROGRAM LWIN(KC_P)
-#define D_TERMINAL LWIN(KC_ENTER)
+#define D_PROGRAM LALT(KC_P)
+#define D_TERMINAL LALT(KC_ENTER)
 
 #include "generated.h"
 
