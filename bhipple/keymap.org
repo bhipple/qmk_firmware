@@ -86,7 +86,7 @@ To flash, run ./flash.sh from the root of the project.
 
 * Layer Macros
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ===================== |
-| KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
+| KC_TRANSPARENT       | KC_F11               | KC_F12               | KC_F13               | KC_F14               | KC_F15               |   | KC_F16               | KC_F17               | KC_F18               | KC_F19               | KC_F20               | KC_F21                |
 | KC_TRANSPARENT       | TO(Qwerty)           | TO(Colemak)          | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT        |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | M_PASTE              | KC_ESCAPE            | KC_TRANSPARENT       |   | KC_LEFT              | KC_DOWN              | KC_UP                | KC_RIGHT             | KC_TRANSPARENT       | M_EOL_SEMICOLON       |
 | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       | KC_TRANSPARENT       |   | D_BLUETOOTH_CON      | KC_KB_MUTE           | KC_KB_VOLUME_DOWN    | KC_KB_VOLUME_UP      | D_BLUETOOTH_DISC     | QK_BOOTLOADER         |
