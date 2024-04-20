@@ -1,5 +1,7 @@
 #define TAPPING_TERM 150
 
+#define COMBO_TERM 100
+
 // If I press and hold a key for longer than TAPPING_TERM but do not press another key, send the original key
 // https://docs.qmk.fm/#/tap_hold?id=retro-tapping
 #define RETRO_TAPPING
