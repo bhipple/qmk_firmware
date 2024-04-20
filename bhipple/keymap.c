@@ -3,11 +3,10 @@
 #define Colemak 0
 #define NumPad 1
 #define Macros 2
-#define LeftIdx 3
-#define RightIdx 4
-#define Editor 5
-#define Tmux 6
-#define Qwerty 7
+#define Idx 3
+#define Editor 4
+#define Tmux 5
+#define Qwerty 6
 
 // Define Aliases
 #define D_BLUETOOTH_CON KC_WWW_SEARCH
