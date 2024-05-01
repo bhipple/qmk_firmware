@@ -12,7 +12,9 @@ if hwinfo | grep -i "Keychron V8"; then kb=keychron/v8/ansi_encoder; km=default;
 #if hwinfo | grep -i Scylla; then kb=bastardkb/scylla/v1/elitec; fi
 #if hwinfo | grep -i Charybdis; then kb=bastardkb/charybdis/4x6/v1/elitec; fi
 
-nix-shell --run "qmk compile -km $km -kb $kb -t out.hex"
+nix-shell --run "qmk compile -km $km -kb $kb"
 
-echo "Flashing km=$km kb=$kb"
-nix-shell --run "sudo qmk flash out.hex"  # TODO: fix the nixos udev rules and drop sudo
+bin=$(echo $kb | sed 's|/|_|g')_$km.bin
+
+echo "Flashing km=$km kb=$kb with $bin"
+echo nix-shell --run "sudo qmk flash $bin"  # TODO: fix the nixos udev rules and drop sudo
