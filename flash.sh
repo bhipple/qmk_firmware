@@ -17,4 +17,4 @@ nix-shell --run "qmk compile -km $km -kb $kb"
 bin=$(echo $kb | sed 's|/|_|g')_$km.bin
 
 echo "Flashing km=$km kb=$kb with $bin"
-echo nix-shell --run "sudo qmk flash $bin"  # TODO: fix the nixos udev rules and drop sudo
+nix-shell --run "sudo qmk flash $bin"  # TODO: fix the nixos udev rules and drop sudo

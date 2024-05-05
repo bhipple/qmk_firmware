@@ -17,8 +17,6 @@
 #include "generated.h"
 
 // Top row
-const uint16_t PROGMEM combo1[] = {KC_P, KC_L, COMBO_END};
-const uint16_t PROGMEM combo2[] = {KC_F, KC_U, COMBO_END};
 // Home row
 const uint16_t PROGMEM combo3[] = {MT(MOD_LGUI, KC_S), MT(MOD_RGUI, KC_E), COMBO_END};
 const uint16_t PROGMEM combo4[] = {MT(MOD_LALT, KC_R), MT(MOD_RALT, KC_I), COMBO_END};
@@ -26,8 +24,6 @@ const uint16_t PROGMEM combo4[] = {MT(MOD_LALT, KC_R), MT(MOD_RALT, KC_I), COMBO
 const uint16_t PROGMEM combo5[] = {KC_D, KC_H, COMBO_END};
 
 combo_t key_combos[] = {
-    COMBO(combo1, KC_SPACE),
-    COMBO(combo2, KC_SPACE),
     COMBO(combo3, KC_SPACE),
     COMBO(combo4, KC_SPACE),
     COMBO(combo5, KC_SPACE),
