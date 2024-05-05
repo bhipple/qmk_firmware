@@ -8,13 +8,13 @@ nix-shell -p qmk --run 'make git-submodules'
 ./bhipple/regen.py scylla | tee keyboards/bastardkb/scylla/keymaps/bhipple/generated.h
 
 km=bhipple
-if hwinfo | grep -i "Keychron V8"; then kb=keychron/v8/ansi_encoder; km=default; fi
+#if hwinfo | grep -i "Keychron V8"; then kb=keychron/v8/ansi_encoder; km=default; fi
 #if hwinfo | grep -i Scylla; then kb=bastardkb/scylla/v1/elitec; fi
-#if hwinfo | grep -i Charybdis; then kb=bastardkb/charybdis/4x6/v1/elitec; fi
+if hwinfo | grep -i Charybdis; then kb=bastardkb/charybdis/4x6/v1/elitec; fi
 
 nix-shell --run "qmk compile -km $km -kb $kb"
 
-bin=$(echo $kb | sed 's|/|_|g')_$km.bin
+bin=$(echo $kb | sed 's|/|_|g')_$km
 
 echo "Flashing km=$km kb=$kb with $bin"
-nix-shell --run "sudo qmk flash $bin"  # TODO: fix the nixos udev rules and drop sudo
+nix-shell --run "sudo qmk flash $bin*"  # TODO: fix the nixos udev rules and drop sudo

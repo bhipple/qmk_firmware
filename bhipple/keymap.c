@@ -1,13 +1,5 @@
 #include QMK_KEYBOARD_H
 
-#define Colemak 0
-#define NumPad 1
-#define Macros 2
-#define Idx 3
-#define Editor 4
-#define Tmux 5
-#define Qwerty 6
-
 // Define Aliases
 #define D_BLUETOOTH_CON KC_WWW_SEARCH
 #define D_BLUETOOTH_DISC KC_MAIL
