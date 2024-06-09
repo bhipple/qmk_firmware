@@ -1,1 +1,1 @@
-../../../../../qmk_firmware/bhipple/config.h
+../../../../../bhipple/config.h

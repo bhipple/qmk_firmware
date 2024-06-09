@@ -1,1 +1,1 @@
-../../../../../qmk_firmware/bhipple/keymap.c
+../../../../../bhipple/keymap.c
