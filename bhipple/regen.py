@@ -80,8 +80,6 @@ def main():
             if section:
                 layers[section] = keys + footer
             section = ln.split()[-1]
-            #keymap += f'  [{section}] = {layout}(\n'
-                #keymap += ',\n{footer}\n  ),\n\n'
             keys = []
         if ln.startswith('|'):
             if '======' in ln:
