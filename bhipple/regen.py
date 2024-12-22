@@ -2,7 +2,6 @@
 # Super hacky compiler for my org file
 import argparse
 import os
-import re
 
 
 def keycodes(keycodes):
@@ -36,20 +35,16 @@ bool generated_keycode_process(uint16_t keycode) {
 
 # Hard-code the footers in here, since they're all very different per-keyboard
 footers = {
-    'charybdis': ['KC_NO'] * 8,
-    'scylla':    ['KC_NO'] * 10,
     'voyager':   ['KC_NO', 'KC_SPACE', 'KC_NO', 'KC_NO'],
     'keychron':  ['KC_LCTL', 'KC_LWIN', 'KC_LALT', 'KC_SPC', 'MO(_FN1)',     'MO(_FN3)', 'KC_SPC', 'KC_RALT', 'KC_LEFT', 'KC_DOWN', 'KC_RGHT'],
 }
 
 def main():
     parser = argparse.ArgumentParser('Generator for QMK keymaps')
-    parser.add_argument('keyboard', choices=['charybdis', 'scylla', 'voyager', 'keychron'], help='Keyboard to generate')
+    parser.add_argument('keyboard', choices=['voyager', 'keychron'], help='Keyboard to generate')
     args = parser.parse_args()
 
     layout = {
-        'charybdis': 'LAYOUT_charybdis_4x6',
-        'scylla':    'LAYOUT_split_4x6_5',
         'voyager':   'LAYOUT_voyager',
         'keychron':  'LAYOUT_ansi_69',
     }[args.keyboard]
