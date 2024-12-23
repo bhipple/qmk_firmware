@@ -10,8 +10,8 @@ qmk compile -km default -kb keychron/v8/ansi_encoder &
 qmk compile -km bhipple -kb zsa/voyager &
 wait
 
-km=default ; kb=keychron/v8/ansi_encoder
 km=bhipple ; kb=zsa/voyager
+km=default ; kb=keychron/v8/ansi_encoder
 
 fname=$(echo $kb | sed 's|/|_|g')_$km
 if [ -e "$fname.bin" ]; then
