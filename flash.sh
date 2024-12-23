@@ -8,12 +8,10 @@ nix-shell -p qmk --run 'make git-submodules'
 
 nix-shell --run "qmk compile -km bhipple -kb zsa/voyager" &
 nix-shell --run "qmk compile -km default -kb keychron/v8/ansi_encoder" &
-
-km=bhipple
-#if hwinfo | grep -i "Keychron V8"; then kb=keychron/v8/ansi_encoder; km=default; fi
-if hwinfo | grep -i Voyager; then kb=zsa/voyager; fi
-
 wait
+
+km=default ; kb=keychron/v8/ansi_encoder
+km=bhipple ; kb=zsa/voyager
 
 fname=$(echo $kb | sed 's|/|_|g')_$km
 if [ -e "$fname.bin" ]; then
