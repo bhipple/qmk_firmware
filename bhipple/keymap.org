@@ -2,68 +2,69 @@
 To flash, run ./flash.sh from the root of the project.
 
 * Keycodes
-| M_BRKT_L_C          | "[c"                      |
-| M_BRKT_R_C          | "]c"                      |
-| M_CLEAR             | "clear\n"                 |
-| M_COLON_CLOSE       | ":close\n"                |
-| M_COLON_DIFFGET     | ":diffget\n"              |
-| M_COLON_DIFFPUT     | ":diffput\n"              |
-| M_COLON_Q           | ":q\n"                    |
-| M_COLON_QA          | ":qa\n"                   |
-| M_COLON_S_P         | ":sp\n"                   |
-| M_COLON_TABCLOSE    | ":tabclose\n"             |
-| M_COLON_TABNEW      | ":tabnew\n"               |
-| M_COLON_V_S_P       | ":vsp\n"                  |
-| M_COLON_W           | ":w\n"                    |
-| M_EMACS_DOWN        | SS_TAP(X_ESCAPE) " wj\n"  |
-| M_EMACS_LEFT        | SS_TAP(X_ESCAPE) " wh\n"  |
-| M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) " wl\n"  |
-| M_EMACS_SWITCH_BUF  | SS_LCTL("x") "b"          |
-| M_EMACS_UP          | SS_TAP(X_ESCAPE) " wk\n"  |
-| M_EOL_BRACE         | SS_TAP(X_ESCAPE) "A{"     |
-| M_EOL_SEMICOLON     | SS_TAP(X_ESCAPE) "A;"     |
-| M_gt                | "gt"                      |
-| M_gT                | "gT"                      |
-| M_PASTE             | SS_LSFT(SS_TAP(X_INSERT)) |
-| M_SPC_B_B           | " bb"                     |
-| M_SPC_G_S           | " gs"                     |
-| M_SPC_J_J           | " jj"                     |
-| M_SPC_P_F           | " pf"                     |
-| M_SPC_P_P           | " pp"                     |
-| M_SPC_R_T           | " rt"                     |
-| M_SPC_SLASH         | " /"                      |
-| M_SPC_STAR          | " *"                      |
-| M_TMUX_CREATE       | SS_LCTL("b") "c"          |
-| M_TMUX_DELETE       | SS_LCTL("b") "xy"         |
-| M_TMUX_DOWN         | SS_LCTL("j")              |
-| M_TMUX_FILE         | SS_LCTL("bf")             |
-| M_TMUX_GIT          | SS_LCTL("bg")             |
-| M_TMUX_LEFT         | SS_LCTL("h")              |
-| M_TMUX_LIST_WINDOWS | SS_LCTL("b") "w"          |
-| M_TMUX_NEXT         | SS_LCTL("b") "n"          |
-| M_TMUX_PASTE        | SS_LCTL("b") "]"          |
-| M_TMUX_PREV         | SS_LCTL("b") "p"          |
-| M_TMUX_RERUN        | "!!"                      |
-| M_TMUX_RIGHT        | SS_LCTL("l")              |
-| M_TMUX_SCROLL       | SS_LCTL("b") "["          |
-| M_TMUX_SEARCH       | SS_LCTL("b") "/"          |
-| M_TMUX_SPLIT        | SS_LCTL("b") SS_LSFT("'") |
-| M_TMUX_SWAP_PANES   | SS_LCTL("b") "o"          |
-| M_TMUX_UP           | SS_LCTL("k")              |
-| M_TMUX_URL          | SS_LCTL("bu")             |
-| M_TMUX_VSPLIT       | SS_LCTL("b") "%"          |
-| M_TMUX_WINDOW_1     | SS_LCTL("b") "1"          |
-| M_TMUX_WINDOW_2     | SS_LCTL("b") "2"          |
-| M_TMUX_WINDOW_3     | SS_LCTL("b") "3"          |
-| M_TMUX_WINDOW_4     | SS_LCTL("b") "4"          |
-| M_TMUX_WINDOW_5     | SS_LCTL("b") "5"          |
-| M_TMUX_WINDOW_6     | SS_LCTL("b") "6"          |
-| M_TMUX_WINDOW_7     | SS_LCTL("b") "7"          |
-| M_TMUX_WINDOW_8     | SS_LCTL("b") "8"          |
-| M_TMUX_WINDOW_9     | SS_LCTL("b") "9"          |
-| M_TMUX_WINDOW_LEFT  | SS_LCTL("b") "h"          |
-| M_TMUX_WINDOW_RIGHT | SS_LCTL("b") "l"          |
-| M_TMUX_ZOOM         | SS_LCTL("b") "z"          |
+| M_BRKT_L_C          | "[c"                                      |
+| M_BRKT_R_C          | "]c"                                      |
+| M_CLEAR             | "clear\n"                                 |
+| M_COLON_CLOSE       | ":close\n"                                |
+| M_COLON_DIFFGET     | ":diffget\n"                              |
+| M_COLON_DIFFPUT     | ":diffput\n"                              |
+| M_COLON_Q           | ":q\n"                                    |
+| M_COLON_QA          | ":qa\n"                                   |
+| M_COLON_S_P         | ":sp\n"                                   |
+| M_COLON_TABCLOSE    | ":tabclose\n"                             |
+| M_COLON_TABNEW      | ":tabnew\n"                               |
+| M_COLON_V_S_P       | ":vsp\n"                                  |
+| M_COLON_W           | ":w\n"                                    |
+| M_EMACS_DOWN        | SS_TAP(X_ESCAPE) " wj\n"                  |
+| M_EMACS_LEFT        | SS_TAP(X_ESCAPE) " wh\n"                  |
+| M_EMACS_RIGHT       | SS_TAP(X_ESCAPE) " wl\n"                  |
+| M_EMACS_SWITCH_BUF  | SS_LCTL("x") "b"                          |
+| M_EMACS_UP          | SS_TAP(X_ESCAPE) " wk\n"                  |
+| M_EOL_BRACE         | SS_TAP(X_ESCAPE) "A{"                     |
+| M_EOL_SEMICOLON     | SS_TAP(X_ESCAPE) "A;"                     |
+| M_gt                | "gt"                                      |
+| M_gT                | "gT"                                      |
+| M_PASTE             | SS_LSFT(SS_TAP(X_INSERT))                 |
+| M_SPC_B_B           | " bb"                                     |
+| M_SPC_G_S           | " gs"                                     |
+| M_SPC_J_J           | " jj"                                     |
+| M_SPC_P_F           | " pf"                                     |
+| M_SPC_P_P           | " pp"                                     |
+| M_SPC_R_T           | " rt"                                     |
+| M_SPC_SLASH         | " /"                                      |
+| M_SPC_STAR          | " *"                                      |
+| M_TMUX_CREATE       | SS_LCTL("b") "c"                          |
+| M_TMUX_DELETE       | SS_LCTL("b") "xy"                         |
+| M_TMUX_DOWN         | SS_LCTL("j")                              |
+| M_TMUX_FILE         | SS_LCTL("bf")                             |
+| M_TMUX_GIT          | SS_LCTL("bg")                             |
+| M_TMUX_LAYOUT_H     | SS_LCTL("b") ":selectl even-horizontal\n" |
+| M_TMUX_LEFT         | SS_LCTL("h")                              |
+| M_TMUX_LIST_WINDOWS | SS_LCTL("b") "w"                          |
+| M_TMUX_NEXT         | SS_LCTL("b") "n"                          |
+| M_TMUX_PASTE        | SS_LCTL("b") "]"                          |
+| M_TMUX_PREV         | SS_LCTL("b") "p"                          |
+| M_TMUX_RERUN        | "!!"                                      |
+| M_TMUX_RIGHT        | SS_LCTL("l")                              |
+| M_TMUX_SCROLL       | SS_LCTL("b") "["                          |
+| M_TMUX_SEARCH       | SS_LCTL("b") "/"                          |
+| M_TMUX_SPLIT        | SS_LCTL("b") SS_LSFT("'")                 |
+| M_TMUX_SWAP_PANES   | SS_LCTL("b") "o"                          |
+| M_TMUX_UP           | SS_LCTL("k")                              |
+| M_TMUX_URL          | SS_LCTL("bu")                             |
+| M_TMUX_VSPLIT       | SS_LCTL("b") "%"                          |
+| M_TMUX_WINDOW_1     | SS_LCTL("b") "1"                          |
+| M_TMUX_WINDOW_2     | SS_LCTL("b") "2"                          |
+| M_TMUX_WINDOW_3     | SS_LCTL("b") "3"                          |
+| M_TMUX_WINDOW_4     | SS_LCTL("b") "4"                          |
+| M_TMUX_WINDOW_5     | SS_LCTL("b") "5"                          |
+| M_TMUX_WINDOW_6     | SS_LCTL("b") "6"                          |
+| M_TMUX_WINDOW_7     | SS_LCTL("b") "7"                          |
+| M_TMUX_WINDOW_8     | SS_LCTL("b") "8"                          |
+| M_TMUX_WINDOW_9     | SS_LCTL("b") "9"                          |
+| M_TMUX_WINDOW_LEFT  | SS_LCTL("b") "h"                          |
+| M_TMUX_WINDOW_RIGHT | SS_LCTL("b") "l"                          |
+| M_TMUX_ZOOM         | SS_LCTL("b") "z"                          |
 
 * Layer Colemak
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ===================== |
@@ -103,7 +104,7 @@ To flash, run ./flash.sh from the root of the project.
 * Layer Tmux
 | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== |   | ==================== | ==================== | ==================== | ==================== | ==================== | ===================== |
 | _______              | M_TMUX_WINDOW_1      | M_TMUX_WINDOW_2      | M_TMUX_WINDOW_3      | M_TMUX_WINDOW_4      | M_TMUX_WINDOW_5      |   | M_TMUX_WINDOW_6      | M_TMUX_WINDOW_7      | M_TMUX_WINDOW_8      | M_TMUX_WINDOW_9      | _______              | _______               |
-| _______              | _______              | M_TMUX_LIST_WINDOWS  | M_TMUX_FILE          | _______              | _______              |   | _______              | M_TMUX_WINDOW_LEFT   | M_TMUX_WINDOW_RIGHT  | _______              | M_TMUX_SWAP_PANES    | _______               |
+| _______              | _______              | M_TMUX_LIST_WINDOWS  | M_TMUX_FILE          | M_TMUX_LAYOUT_H      | _______              |   | _______              | M_TMUX_WINDOW_LEFT   | M_TMUX_WINDOW_RIGHT  | _______              | M_TMUX_SWAP_PANES    | _______               |
 | _______              | _______              | M_TMUX_RERUN         | M_TMUX_SPLIT         | M_TMUX_SCROLL        | M_CLEAR              |   | M_TMUX_LEFT          | M_TMUX_PREV          | M_TMUX_NEXT          | M_TMUX_RIGHT         | _______              | _______               |
 | _______              | M_TMUX_ZOOM          | _______              | M_TMUX_CREATE        | M_TMUX_DELETE        | M_TMUX_VSPLIT        |   | _______              | _______              | _______              | _______              | M_TMUX_SEARCH        | _______               |
 

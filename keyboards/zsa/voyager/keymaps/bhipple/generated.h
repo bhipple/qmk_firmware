@@ -38,6 +38,7 @@ enum my_keycodes {
     M_TMUX_DOWN,
     M_TMUX_FILE,
     M_TMUX_GIT,
+    M_TMUX_LAYOUT_H,
     M_TMUX_LEFT,
     M_TMUX_LIST_WINDOWS,
     M_TMUX_NEXT,
@@ -176,6 +177,9 @@ bool generated_keycode_process(uint16_t keycode) {
         case M_TMUX_GIT:
             SEND_STRING(SS_LCTL("bg"));
             break;
+        case M_TMUX_LAYOUT_H:
+            SEND_STRING(SS_LCTL("b") ":selectl even-horizontal\n");
+            break;
         case M_TMUX_LEFT:
             SEND_STRING(SS_LCTL("h"));
             break;
@@ -280,7 +284,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [Editor] = LAYOUT_voyager(_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, M_COLON_Q, M_COLON_W, _______, M_SPC_P_P, M_COLON_DIFFPUT, M_BRKT_R_C, KC_F1, KC_F2, KC_F3, KC_F4, _______, _______, M_COLON_DIFFGET, M_SPC_R_T, _______, _______, M_SPC_STAR, M_BRKT_L_C, M_gT, M_gt, M_EMACS_RIGHT, _______, _______, _______, _______, _______, M_COLON_TABNEW, M_COLON_CLOSE, M_COLON_V_S_P, _______, M_SPC_P_F, _______, _______, M_SPC_SLASH, _______, KC_NO, KC_SPACE, KC_NO, KC_NO),
 
-[Tmux] = LAYOUT_voyager(_______, M_TMUX_WINDOW_1, M_TMUX_WINDOW_2, M_TMUX_WINDOW_3, M_TMUX_WINDOW_4, M_TMUX_WINDOW_5, M_TMUX_WINDOW_6, M_TMUX_WINDOW_7, M_TMUX_WINDOW_8, M_TMUX_WINDOW_9, _______, _______, _______, _______, M_TMUX_LIST_WINDOWS, M_TMUX_FILE, _______, _______, _______, M_TMUX_WINDOW_LEFT, M_TMUX_WINDOW_RIGHT, _______, M_TMUX_SWAP_PANES, _______, _______, _______, M_TMUX_RERUN, M_TMUX_SPLIT, M_TMUX_SCROLL, M_CLEAR, M_TMUX_LEFT, M_TMUX_PREV, M_TMUX_NEXT, M_TMUX_RIGHT, _______, _______, _______, M_TMUX_ZOOM, _______, M_TMUX_CREATE, M_TMUX_DELETE, M_TMUX_VSPLIT, _______, _______, _______, _______, M_TMUX_SEARCH, _______, KC_NO, KC_SPACE, KC_NO, KC_NO),
+[Tmux] = LAYOUT_voyager(_______, M_TMUX_WINDOW_1, M_TMUX_WINDOW_2, M_TMUX_WINDOW_3, M_TMUX_WINDOW_4, M_TMUX_WINDOW_5, M_TMUX_WINDOW_6, M_TMUX_WINDOW_7, M_TMUX_WINDOW_8, M_TMUX_WINDOW_9, _______, _______, _______, _______, M_TMUX_LIST_WINDOWS, M_TMUX_FILE, M_TMUX_LAYOUT_H, _______, _______, M_TMUX_WINDOW_LEFT, M_TMUX_WINDOW_RIGHT, _______, M_TMUX_SWAP_PANES, _______, _______, _______, M_TMUX_RERUN, M_TMUX_SPLIT, M_TMUX_SCROLL, M_CLEAR, M_TMUX_LEFT, M_TMUX_PREV, M_TMUX_NEXT, M_TMUX_RIGHT, _______, _______, _______, M_TMUX_ZOOM, _______, M_TMUX_CREATE, M_TMUX_DELETE, M_TMUX_VSPLIT, _______, _______, _______, _______, M_TMUX_SEARCH, _______, KC_NO, KC_SPACE, KC_NO, KC_NO),
 
 [Qwerty] = LAYOUT_voyager(KC_ESCAPE, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINUS, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BACKSLASH, OSL(Macros), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_LEFT_SHIFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, TO(Colemak), KC_NO, KC_SPACE, KC_NO, KC_NO),
 
