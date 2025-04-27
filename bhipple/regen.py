@@ -35,7 +35,7 @@ bool generated_keycode_process(uint16_t keycode) {
 
 # Hard-code the footers in here, since they're all very different per-keyboard
 footers = {
-    'voyager':   ['KC_NO', 'KC_SPACE', 'KC_NO', 'KC_NO'],
+    'voyager':   ['KC_INT2', 'KC_SPACE', 'KC_NO', 'KC_NO'],
     'keychron':  ['KC_LCTL', 'KC_LWIN', 'KC_LALT', 'KC_SPC', 'MO(_FN1)',     'MO(_FN3)', 'KC_SPC', 'KC_RALT', 'KC_LEFT', 'KC_DOWN', 'KC_RGHT'],
 }
 
