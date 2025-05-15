@@ -2,6 +2,7 @@
 
 enum my_keycodes {
     M_UNUSED = SAFE_RANGE,
+    M_AUTOMERGE,
     M_BRKT_L_C,
     M_BRKT_R_C,
     M_CLEAR,
@@ -69,6 +70,9 @@ enum my_keycodes {
 
 bool generated_keycode_process(uint16_t keycode) {
     switch (keycode) {
+        case M_AUTOMERGE:
+            SEND_STRING("[automerge]");
+            break;
         case M_BRKT_L_C:
             SEND_STRING("[c");
             break;
@@ -280,7 +284,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [Macros] = LAYOUT_voyager(_______, KC_F11, KC_F12, KC_F13, KC_F14, KC_F15, KC_F16, KC_F17, KC_F18, KC_F19, KC_F20, KC_RIGHT_CTRL, _______, TO(Qwerty), TO(Colemak), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, M_PASTE, KC_ESCAPE, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, _______, M_EOL_SEMICOLON, _______, _______, _______, _______, _______, _______, D_BLUETOOTH_CON, KC_KB_MUTE, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, D_BLUETOOTH_DISC, QK_BOOTLOADER, KC_INT2, KC_SPACE, KC_NO, KC_NO),
 
-[Idx] = LAYOUT_voyager(_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, D_PROGRAM, _______, _______, D_TERMINAL, _______, _______, _______, _______, _______, _______, _______, KC_ENTER, KC_BACKSPACE, _______, _______, KC_SPACE, KC_ENTER, KC_ESCAPE, _______, _______, _______, _______, _______, M_CLEAR, _______, _______, _______, _______, _______, _______, _______, _______, KC_INT2, KC_SPACE, KC_NO, KC_NO),
+[Idx] = LAYOUT_voyager(_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, D_PROGRAM, _______, _______, D_TERMINAL, _______, _______, _______, _______, _______, M_AUTOMERGE, _______, KC_ENTER, KC_BACKSPACE, _______, _______, KC_SPACE, KC_ENTER, KC_ESCAPE, _______, _______, _______, _______, _______, M_CLEAR, _______, _______, _______, _______, _______, _______, _______, _______, KC_INT2, KC_SPACE, KC_NO, KC_NO),
 
 [Editor] = LAYOUT_voyager(_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, M_COLON_Q, M_COLON_W, _______, M_SPC_P_P, M_COLON_DIFFPUT, M_BRKT_R_C, KC_F1, KC_F2, KC_F3, KC_F4, _______, _______, M_COLON_DIFFGET, M_SPC_R_T, _______, _______, M_SPC_STAR, M_BRKT_L_C, M_gT, M_gt, M_EMACS_RIGHT, _______, _______, _______, _______, _______, M_COLON_TABNEW, M_COLON_CLOSE, M_COLON_V_S_P, _______, M_SPC_P_F, _______, _______, M_SPC_SLASH, _______, KC_INT2, KC_SPACE, KC_NO, KC_NO),
 
