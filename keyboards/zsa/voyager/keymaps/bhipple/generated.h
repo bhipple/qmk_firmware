@@ -52,8 +52,6 @@ enum my_keycodes {
     M_TMUX_SEARCH,
     M_TMUX_SPLIT,
     M_TMUX_SWAP_PANES,
-    M_TMUX_UP,
-    M_TMUX_URL,
     M_TMUX_VSPLIT,
     M_TMUX_WINDOW_1,
     M_TMUX_WINDOW_2,
@@ -174,7 +172,7 @@ bool generated_keycode_process(uint16_t keycode) {
             SEND_STRING(SS_LCTL("b") "c");
             break;
         case M_TMUX_DELETE:
-            SEND_STRING(SS_LCTL("b") "xy");
+            SEND_STRING(SS_LCTL("b") "x");
             break;
         case M_TMUX_DOWN:
             SEND_STRING(SS_LCTL("j"));
@@ -220,12 +218,6 @@ bool generated_keycode_process(uint16_t keycode) {
             break;
         case M_TMUX_SWAP_PANES:
             SEND_STRING(SS_LCTL("b") "o");
-            break;
-        case M_TMUX_UP:
-            SEND_STRING(SS_LCTL("k"));
-            break;
-        case M_TMUX_URL:
-            SEND_STRING(SS_LCTL("bu"));
             break;
         case M_TMUX_VSPLIT:
             SEND_STRING(SS_LCTL("b") "%");

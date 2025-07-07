@@ -36,7 +36,7 @@ To flash, run ./flash.sh from the root of the project.
 | M_SPC_SLASH         | " /"                                      |
 | M_SPC_STAR          | " *"                                      |
 | M_TMUX_CREATE       | SS_LCTL("b") "c"                          |
-| M_TMUX_DELETE       | SS_LCTL("b") "xy"                         |
+| M_TMUX_DELETE       | SS_LCTL("b") "x"                          |
 | M_TMUX_DOWN         | SS_LCTL("j")                              |
 | M_TMUX_FILE         | SS_LCTL("bf")                             |
 | M_TMUX_GIT          | SS_LCTL("bg")                             |
@@ -52,8 +52,6 @@ To flash, run ./flash.sh from the root of the project.
 | M_TMUX_SEARCH       | SS_LCTL("b") "/"                          |
 | M_TMUX_SPLIT        | SS_LCTL("b") SS_LSFT("'")                 |
 | M_TMUX_SWAP_PANES   | SS_LCTL("b") "o"                          |
-| M_TMUX_UP           | SS_LCTL("k")                              |
-| M_TMUX_URL          | SS_LCTL("bu")                             |
 | M_TMUX_VSPLIT       | SS_LCTL("b") "%"                          |
 | M_TMUX_WINDOW_1     | SS_LCTL("b") "1"                          |
 | M_TMUX_WINDOW_2     | SS_LCTL("b") "2"                          |
