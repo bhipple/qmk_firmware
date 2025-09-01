@@ -6,8 +6,8 @@ nix-shell -p qmk --run 'make git-submodules'
 
 ./bhipple/regen.py voyager   | tee keyboards/zsa/voyager/keymaps/bhipple/generated.h
 
-nix-shell --run "qmk compile -km bhipple -kb zsa/voyager" &
 nix-shell --run "qmk compile -km default -kb keychron/v8/ansi_encoder" &
+nix-shell --run "qmk compile -km bhipple -kb zsa/voyager" &
 wait
 
 km=bhipple ; kb=zsa/voyager
