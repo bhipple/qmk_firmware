@@ -1,18 +1,11 @@
-#define TAPPING_TERM 125
+#define TAPPING_TERM 150
 
-// Opposite-hands rule: a tap-hold key chorded with another key on the SAME
-// hand always settles as tapped, so same-hand rolls can't misfire mods/layers.
-// https://docs.qmk.fm/tap_hold#chordal-hold
-#define CHORDAL_HOLD
+// If I press and hold a key for longer than TAPPING_TERM but do not press another key, send the original key
+// https://docs.qmk.fm/#/tap_hold?id=retro-tapping
+#define RETRO_TAPPING
 
-// With same-hand rolls filtered by Chordal Hold, let an opposite-hand key that
-// is pressed AND released while a tap-hold key is down settle it as held, even
-// faster than TAPPING_TERM.
-// https://docs.qmk.fm/tap_hold#permissive-hold
-#define PERMISSIVE_HOLD
-
-// While typing quickly (a tap-hold alpha pressed within this many ms of the
-// previous alpha), settle as tapped immediately: no accidental holds mid-word
-// and no tapping-term latency.
-// https://docs.qmk.fm/tap_hold#flow-tap
-#define FLOW_TAP_TERM 150
+// When defined: if I hold a tap-hold modifier key, then press another key, then
+// release the other key, send the tap hold even if faster than TAPPING_TERM.
+// https://docs.qmk.fm/#/tap_hold?id=permissive-hold
+#undef PERMISSIVE_HOLD
+#undef PERMISSIVE_HOLD_PER_KEY
