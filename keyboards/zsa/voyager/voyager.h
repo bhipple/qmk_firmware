@@ -15,10 +15,17 @@ extern bool mcp23018_leds[];
 #define STATUS_LED_3(status) mcp23018_leds[0] = (bool)(status)
 #define STATUS_LED_4(status) mcp23018_leds[1] = (bool)(status)
 
+// The zsa/defaults community module declares TOGGLE_LAYER_COLOR / LED_LEVEL at
+// these same QK_KB-based values, so declaring them here too is a redefinition
+// whenever that module is enabled.
+#ifdef COMMUNITY_MODULE_DEFAULTS_ENABLE
+#    include "defaults.h"
+#else
 enum voyager_keycodes {
     TOGGLE_LAYER_COLOR = QK_KB,
     LED_LEVEL,
 };
+#endif
 
 typedef union {
     uint32_t raw;
